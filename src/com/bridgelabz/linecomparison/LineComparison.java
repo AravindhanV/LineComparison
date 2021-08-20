@@ -5,10 +5,20 @@ import com.bridgelabz.linecomparison.Point;
 public class LineComparison {
 	public static void main(String[] args) {
 		System.out.println("Welcome to Line Comparison Computation Program");
+		//Line 1
 		Point p1 = new Point(1,1);
 		Point p2 = new Point(3,3);
+		Double len1 = p1.getDistance(p2);
 		
-		double len = Math.sqrt(Math.pow(p1.x-p2.x, 2)+Math.pow(p2.y-p1.y, 2));
-		System.out.print("Length of line: "+len);
+		//Line 2
+		Point p3 = new Point(2,2);
+		Point p4 = new Point(4,4);
+		Double len2 = p3.getDistance(p4);
+		
+		if(len1.equals(len2)) {
+			System.out.println("Lines are Equal");
+		} else {
+			System.out.println("Lines are not equal");
+		}
 	}
 }
