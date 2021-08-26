@@ -15,16 +15,12 @@ public class LineComparison {
 		Point point4 = new Point(4,4);
 		Double length2 = point3.getDistance(point4);
 		
-		compareLines(length1,length2);
+		LengthComparisonIF lengthComparison = new LengthComparisonImpl();
+		lengthComparison.checkEqual(length1,length2);
+		lengthComparison.compareLength(length1, length2);
 	}
 	
 	public static void compareLines(Double length1, Double length2) {
-		if(length1.compareTo(length2)==0) {
-			System.out.println("Lines are Equal");
-		} else if(length1.compareTo(length2)<0){
-			System.out.println("Line 1 is smaller than Line 2");
-		} else {
-			System.out.println("Line 1 is longer than Line 2");
-		}
+		
 	}
 }
