@@ -19,8 +19,4 @@ public class LineComparison {
 		lengthComparison.checkEqual(length1,length2);
 		lengthComparison.compareLength(length1, length2);
 	}
-	
-	public static void compareLines(Double length1, Double length2) {
-		
-	}
 }
